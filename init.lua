@@ -1,0 +1,7 @@
+require'plugins'
+require'settings'
+require'lsp_config'
+require'treesitter_config'
+require'cmp_config'
+require'lir_config'
+require'toggle_term_config'
