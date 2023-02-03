@@ -1,9 +1,10 @@
 local lsp = require'lspconfig'
 local cmp_lsp = require'cmp_nvim_lsp'
 local vim_d = vim.diagnostic
+
 --
 -- Setup lspconfig.
-local capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

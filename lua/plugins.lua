@@ -10,8 +10,13 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- Theme
   Plug('dracula/vim', { ['as'] = 'dracula' })
 
+  Plug 'williamboman/mason.nvim'
+
+  Plug 'williamboman/mason-lspconfig.nvim'
+
   -- Language Server Protocol
   Plug 'neovim/nvim-lspconfig'
+
 
   -- Comment Code
   Plug 'tpope/vim-commentary'
@@ -34,6 +39,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
   -- Git stuff
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 
   -- Rainbow brackets
   Plug 'p00f/nvim-ts-rainbow'
@@ -42,7 +48,9 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'windwp/nvim-ts-autotag'
 
   -- Autocomplete brackets
-  Plug 'jiangmiao/auto-pairs'
+  -- Plug 'MetalPhaeton/neo-easy-brackets'
+  -- Plug 'jiangmiao/auto-pairs'
+  Plug 'windwp/nvim-autopairs'
 
   -- Completion Plugins
   Plug 'hrsh7th/cmp-nvim-lsp'
@@ -69,7 +77,5 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'tamago324/lir-bookmark.nvim'
 
   Plug 'tamago324/lir-git-status.nvim'
-
-
 
 vim.call('plug#end')

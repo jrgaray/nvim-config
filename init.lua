@@ -1,5 +1,6 @@
 require'plugins'
 require'settings'
+require'mason_config'
 require'lsp_config'
 require'treesitter_config'
 require'cmp_config'

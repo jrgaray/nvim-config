@@ -5,13 +5,15 @@ local b_actions = require'lir.bookmark.actions'
 
 require'lir'.setup {
   show_hidden_files = true,
-  devicons_enable = true,
+  devicons = {
+    enable = true
+  },
   mappings = {
     ['i']  = actions.edit,
     ['<Enter>']  = actions.edit,
     ['<C-s>'] = actions.split,
     ['<C-g>'] = actions.vsplit,
-    ['t'] = actions.tabedit,
+    ['<C-r>'] = actions.tabedit,
 
     ['-']     = actions.up,
     ['q']     = actions.quit,
@@ -28,7 +30,7 @@ require'lir'.setup {
 
     ['J'] = function()
       mark_actions.toggle_mark()
-      vim.cmd('normal! j')
+      -- vim.cmd('normal! j')
     end,
     ['C'] = clipboard_actions.copy,
     ['X'] = clipboard_actions.cut,
@@ -37,8 +39,8 @@ require'lir'.setup {
   float = {
     winblend = 0,
     curdir_window = {
-      enable = false,
-      highlight_dirname = false
+      enable = true,
+      highlight_dirname = true 
     },
   },
   hide_cursor = true,
@@ -61,13 +63,15 @@ require'lir'.setup {
 require'lir.bookmark'.setup {
   bookmark_path = '~/.lir_bookmark',
   mappings = {
-    ['l']     = b_actions.edit,
-    ['<C-s>'] = b_actions.split,
-    ['<C-v>'] = b_actions.vsplit,
-    ['<C-t>'] = b_actions.tabedit,
-    ['<C-e>'] = b_actions.open_lir,
-    ['B']     = b_actions.open_lir,
-    ['q']     = b_actions.open_lir,
+    ['l']       = b_actions.edit,
+    ['i']       = b_actions.edit,
+    ['<Enter>'] = b_actions.edit,
+    ['<C-s>']   = b_actions.split,
+    ['<C-v>']   = b_actions.vsplit,
+    ['<C-t>']   = b_actions.tabedit,
+    ['<C-e>']   = b_actions.open_lir,
+    ['B']       = b_actions.open_lir,
+    ['q']       = b_actions.open_lir,
   }
 }
 

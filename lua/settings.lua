@@ -17,7 +17,10 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.completeopt = "menu,menuone,noselect"
+opt.updatetime = 100
+opt.autochdir = true
 
+cmd [[ set grepprg=rg\ --vimgrep ]]
 cmd 'colorscheme dracula'
 cmd 'noswapfile'
 
@@ -27,7 +30,9 @@ g['prettier#autoformat_require_pragma'] = 0
 g['dirvish_git_show_ignored'] = 1
 
 -- Ripgrep to search files
-cmd 'autocmd BufEnter * silent! lcd %:p:h'
+-- cmd 'autocmd BufEnter * silent! lcd %:p:h'
 map('n', '<C-f>', ':Rg<Enter>')
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
+
+require("nvim-autopairs").setup {}
