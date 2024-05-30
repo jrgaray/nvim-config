@@ -1,15 +1,10 @@
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
-  },
-  autotag = {
-    enable = true
-  }
-}
-
+require("nvim-treesitter.configs").setup({
+	ensure_installed = { "tsx", "lua", "html", "json", "css", "go", "java" },
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = false,
+	},
+	autotag = {
+		enable = true,
+	},
+})

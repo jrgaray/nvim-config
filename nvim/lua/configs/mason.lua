@@ -1,13 +1,15 @@
-require"mason".setup()
-require"mason-lspconfig".setup({
-  ensure_installed = { 
-    "tsserver", 
-    "cssls", 
-    "dockerls", 
-    "sumneko_lua", 
-    "graphql", 
-    "pyright", 
-    "sqlls" 
-  },
-  automatic_installlation = true,
+require("mason").setup()
+
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"tsserver",
+		"cssls",
+		"dockerls",
+		"graphql",
+		"pyright",
+		"sqlls",
+		"clangd",
+		"lua_ls",
+	},
+	automatic_installlation = true,
 })
